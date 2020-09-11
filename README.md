@@ -1,0 +1,6 @@
+- [ ] CIT
+- [ ] Fidelity
+- [ ] REST
+- [x] ING
+- [x] USAA
+- [x] eTrade
