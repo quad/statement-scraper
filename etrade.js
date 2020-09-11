@@ -2,7 +2,6 @@ const process = require('process')
 process.on('unhandledRejection', e => { throw e })
 
 const { ETRADE_USERNAME, ETRADE_PASSWORD } = require('secrets')
-console.log(require('secrets'))
 if (!ETRADE_USERNAME) throw new Error('no ETRADE_USERNAME')
 if (!ETRADE_PASSWORD) throw new Error('no ETRADE_PASSWORD')
 
