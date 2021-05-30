@@ -16,13 +16,13 @@ const contentDisposition = require('content-disposition')
 
   await page.goto('https://us.etrade.com/e/t/user/login')
   await page.type('#log-on-form input[name=USER]', ETRADE_USERNAME)
-  await page.type('#log-on-form input[name=ETRADE_PASSWORD]', ETRADE_PASSWORD)
+  await page.type('#log-on-form input[name=PASSWORD]', ETRADE_PASSWORD)
   await Promise.all([
     page.waitForNavigation(),
     page.tap('#log-on-form #logon_button')
   ])
 
-  await page.goto('https://edoc.etrade.com/e/t/onlinedocs/docsearch?doc_type=stmt')
+  await page.goto('https://edoc.etrade.com/e/t/onlinedocs/docsearch?date_type=date_range&from_date=1%2F1%2F2000&to_date=12%2F31%2F9999&doc_type=stmt')
 
   const statements = await page.$$eval(
     '#statemt_description tr[bgcolor]',
